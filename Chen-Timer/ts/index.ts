@@ -15,7 +15,7 @@ function outputTime() {
   setTimeout(outputTime, 20);
 }
 
-document.addEventListener("click", () => {
+(<HTMLElement>document.getElementById("body")).addEventListener("click", () => {
   (document.documentElement as any).webkitRequestFullscreen();
 });
 

@@ -12,19 +12,27 @@
     }
 }
 
+* {
+    user-select: none;
+}
+
 body {
+    padding: 0;
+    margin: 0;
+
+}
+
+.body {
     background-color: black;
     font-size: 100px;
     color: #fff;
     width: 100vw;
     height: 100vh;
-    padding: 0;
-    margin: 0;
     position: relative;
     overflow: hidden;
 }
 
-body>div {
+.body>div {
     position: absolute;
     top: 50%;
     left: 50%;

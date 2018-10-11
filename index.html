@@ -6,17 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Life Timer</title>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <meta name="theme-color" content="#000" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="Description" content="谭健青女票专属" />
     <link rel="stylesheet" href="./Chen-Timer/css/index.css">
 </head>
 
 <body>
-    <div>
-        <div class="rotate">
-            <span id="timeContainer"> Life Timer</span>
+    <div class="body" id="body">
+        <div>
+            <div class="rotate">
+                <span id="timeContainer"> Life Timer</span>
+            </div>
         </div>
     </div>
-
 </body>
 <script src="./Chen-Timer/js/index.js?v=0.01"></script>
+<script>
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    }, false);
+
+    document.documentElement.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+            event.preventDefault();
+        }
+    }, false);
+
+    // 禁用手指双击缩放:
+    var lastTouchEnd = 0;
+    document.documentElement.addEventListener('touchend', function (event) {
+        var now = Date.now();
+        if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+        }
+        lastTouchEnd = now;
+    }, false);
+
+    document.body.addEventListener('touchmove', function (e) {
+        e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+    }, {
+        passive: false
+    }); //passive 参数不能省略，用来兼容ios和android
+</script>
 
 </html>

@@ -10,7 +10,7 @@ function outputTime() {
     i++;
     setTimeout(outputTime, 20);
 }
-document.addEventListener("click", function () {
+document.getElementById("body").addEventListener("click", function () {
     document.documentElement.webkitRequestFullscreen();
 });
 console.log(" ____     __                                                  __    __   \n" +
