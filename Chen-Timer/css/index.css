@@ -7,7 +7,7 @@
     }
 
     span {
-        width: 472px;
+        width: 472px !important;
         display: block;
     }
 }
@@ -37,4 +37,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%)
+}
+
+span {
+    width: 781px;
+    display: block;
 }
