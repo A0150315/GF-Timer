@@ -1,5 +1,5 @@
 "use strict";
-var birthday = new Date(1995, 10, 21);
+var birthday = new Date(1995, 9, 21); // 1995.10.21
 var timeContainer = document.getElementById("timeContainer");
 var i = 0;
 outputTime();

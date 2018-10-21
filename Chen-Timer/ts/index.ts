@@ -1,4 +1,4 @@
-const birthday: Date = new Date(1995, 10, 21);
+const birthday: Date = new Date(1995, 9, 21); // 1995.10.21
 const timeContainer: HTMLElement = document.getElementById(
   "timeContainer"
 ) as HTMLElement;
