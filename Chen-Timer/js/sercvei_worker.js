@@ -2,7 +2,7 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
         navigator.serviceWorker
-            .register('JasonGF-Timer/sw.js', { scope: '/JasonGF-Timer' })
+            .register('/sw.js', { scope: '/JasonGF-Timer' })
             .then(function (registration) {
             // 注册成功
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
