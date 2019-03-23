@@ -2,6 +2,7 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
         navigator.serviceWorker
+            // github Page
             .register('/sw.js', { scope: '/JasonGF-Timer' })
             .then(function (registration) {
             // 注册成功
